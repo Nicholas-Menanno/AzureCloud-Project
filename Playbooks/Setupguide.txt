@@ -1,0 +1,43 @@
+Setup guide
+
+-Creating resource group
+Create resource group on azure /
+
+-Create Virtual Networks
+create first virtual network for jumpbox and DVWA vms
+create second virtual network for elk server in seperate region
+make virtual networks peers
+
+-Make VMS
+create Jumpbox vm with public ip with B1s, use your own computer to make a ssh-keygen public key to use
+create 2 other vms with no public ips with B1ms make sure both are in same availibity set
+all above on first vnet
+create elk vm on the secondary virtual network D
+elk vm on second vnet
+
+-Jumpbox configuration
+install docker "sudo apt update" then "sudo apt install docker.io"
+install ansible "sudo docker pull cyberxsecurity/ansible" 
+start ansible container with "docker run -ti cyberxsecurity/ansible:latest bash"
+within container use ssh-keygen for all other vms ssh key
+
+
+-Security Groups
+Setup security group for first 3 VMS
+Setup secondary one for ELK VM
+
+Load Balancer
+Add health probe
+add two DVWA vms to backend pool
+
+-Configuration
+Login to jumpbox and install docker
+setup ansible ssh key in all other vms
+run DWVA playbook on web vms and ssh in then run curl localhost/setup.php to test if it worked
+add remote user to ansible file
+add ips to host file
+run elksintall playbook
+run filebeat and metricbeat install playbooks
+
+????
+Proft
