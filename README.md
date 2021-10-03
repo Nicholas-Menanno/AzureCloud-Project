@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/Nicholas-Menanno/AzureCloud-Project/issues/1#issue-1014227053
+![Diagram](https://user-images.githubusercontent.com/91547914/135736631-e509939a-4f0c-403d-a2ea-599f3fcf8290.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the commands on the file may be used to install only certain pieces of it, such as Filebeat.
 
